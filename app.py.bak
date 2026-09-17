@@ -114,7 +114,7 @@ with col1:
     
     if uploaded_file:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Collectible", use_column_width=True)
+        st.image(image, caption="Uploaded Collectible", use_container_width=True)
         
         analyze_btn = st.button("🚀 Analyze Item & Find Value", type="primary", use_container_width=True)
 
