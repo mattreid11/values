@@ -54,7 +54,7 @@ def identify_collectible(image: Image.Image) -> IdentificationResult:
     """
     
     response = client.models.generate_content(
-        model='gemini-2.5-flash',
+        model='gemini-3.5-flash',
         contents=[image, prompt],
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
@@ -89,7 +89,7 @@ def analyze_market_value(item_info: IdentificationResult) -> str:
     """
 
     response = client.models.generate_content(
-        model='gemini-2.5-flash',
+        model='gemini-3.5-flash',
         contents=pricing_prompt,
         config=types.GenerateContentConfig(
             tools=[{"google_search": {}}],  # Enable real-time Google Search Grounding
